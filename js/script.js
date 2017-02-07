@@ -33,7 +33,7 @@
       },
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       scrollwheel: false,
-      zoom: 13
+      zoom: 12
     });
   };
 
