@@ -22,5 +22,13 @@
     <script src="js/lib/jquery.twentytwenty.js"></script>
     <script src="js/templates.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(window).on('resize', function() {
+          parent.postMessage($(document).height(), 'http://surfrider-monterey.github.io');
+        });
+        $(window).trigger('resizse');
+      });
+    </script>
   </body>
 </html>
