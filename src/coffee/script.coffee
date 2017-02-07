@@ -14,7 +14,7 @@ app.run = ->
       hash = window.location.hash.replace('#', '').split('/')
       id = hash[0]
       year = if hash[1]? then hash[1] else false
-      app.showImage parseInt(id), parseInt(year)
+      app.showImage parseInt(id), year
     else
       app.showImage 201500668
     return
@@ -59,8 +59,9 @@ app.renderDots = ->
   return
 
 app.showImage = (id, year) ->
-  unless year?
+  unless year? and year
     year = 1972
+  year = parseInt year
   image = app.data[id]
   if app.currentDot
     app.currentDot.setMap null
