@@ -19,6 +19,8 @@
         id = hash[0];
         year = hash[1] != null ? hash[1] : false;
         app.showImage(parseInt(id), parseInt(year));
+      } else {
+        app.showImage(201500668);
       }
     });
   };
