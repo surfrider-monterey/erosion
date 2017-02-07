@@ -18,7 +18,7 @@
         hash = window.location.hash.replace('#', '').split('/');
         id = hash[0];
         year = hash[1] != null ? hash[1] : false;
-        app.showImage(parseInt(id), parseInt(year));
+        app.showImage(parseInt(id), year);
       } else {
         app.showImage(201500668);
       }
@@ -70,9 +70,10 @@
 
   app.showImage = function(id, year) {
     var image, imageLoaded;
-    if (year == null) {
+    if (!((year != null) && year)) {
       year = 1972;
     }
+    year = parseInt(year);
     image = app.data[id];
     if (app.currentDot) {
       app.currentDot.setMap(null);
