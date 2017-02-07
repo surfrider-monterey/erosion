@@ -1,4 +1,22 @@
-<div class="image-compare twentytwenty-container">
-  <img src="https://surfrider-monterey.github.io/coastal-erosion-photos/{{ images.y2015 }}/1972.JPG" alt=""/>
-  <img src="https://surfrider-monterey.github.io/coastal-erosion-photos/{{ images.y2015 }}/2015.JPG" alt=""/>
+<div class="image-wrapper">
+
+  <div class="year-now">
+    <a class="btn btn-default">Today</a>
+  </div>
+  <div class="year-selector">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ year }} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        {{#each image.images }}
+          <li><a href="#{{ ../image_id }}/{{ year }}" data-year="{{ year }}">{{ year }}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="image-compare twentytwenty-container">
+    <img src="https://surfrider-monterey.github.io/coastal-erosion-photos/{{ image_id }}/{{ year }}.jpg" alt=""/>
+    <img src="https://surfrider-monterey.github.io/coastal-erosion-photos/{{ image_id }}/2015.jpg" alt=""/>
+  </div>
 </div>

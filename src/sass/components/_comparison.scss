@@ -8,3 +8,19 @@
     width: 100%;
   }
 }
+
+.image-wrapper {
+  position: relative;
+  .year-selector {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+  }
+  .year-now {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1000;
+  }
+}

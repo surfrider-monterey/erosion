@@ -11,7 +11,10 @@ app.run = ->
   @getData ->
     app.renderDots()
     if window.location.hash
-      app.showImage parseInt(window.location.hash.replace('#', ''))
+      hash = window.location.hash.replace('#', '').split('/')
+      id = hash[0]
+      year = if hash[1]? then hash[1] else false
+      app.showImage parseInt(id), parseInt(year)
     return
   return
 
@@ -53,11 +56,19 @@ app.renderDots = ->
     return
   return
 
-app.showImage = (id) ->
+app.showImage = (id, year) ->
+  unless year?
+    year = 1972
   image = app.data[id]
   if app.currentDot
     app.currentDot.setMap null
-  $('#images').html templates.components.images(image)
+  $('#images').html templates.components.images
+    year: year
+    image_id : id
+    image : image
+  $('.year-selector a').on 'click', ->
+    app.showImage id, $(@).data('year')
+    return
   imageLoaded = ->
     $('.image-compare').twentytwenty()
     return
