@@ -20,11 +20,11 @@ this["templates"]["components"]["images"] = Handlebars.template({"1":function(co
     + alias4(((helper = (helper = helpers.year || (depth0 != null ? depth0.year : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"year","hash":{},"data":data}) : helper)))
     + " <span class=\"caret\"></span>\n      </button>\n      <ul class=\"dropdown-menu\">\n"
     + ((stack1 = helpers.each.call(alias1,((stack1 = (depth0 != null ? depth0.image : depth0)) != null ? stack1.images : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "      </ul>\n    </div>\n  </div>\n  <div class=\"image-compare twentytwenty-container\">\n    <img src=\"http://coastal-erosion.s3-website-us-west-2.amazonaws.com/"
+    + "      </ul>\n    </div>\n  </div>\n  <div class=\"image-compare twentytwenty-container\">\n    <img src=\"https://surfrider-monterey.github.io/coastal-erosion-photos/"
     + alias4(((helper = (helper = helpers.image_id || (depth0 != null ? depth0.image_id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image_id","hash":{},"data":data}) : helper)))
     + "/"
     + alias4(((helper = (helper = helpers.year || (depth0 != null ? depth0.year : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"year","hash":{},"data":data}) : helper)))
-    + ".jpg\" alt=\"\"/>\n    <img src=\"http://coastal-erosion.s3-website-us-west-2.amazonaws.com/"
+    + ".jpg\" alt=\"\"/>\n    <img src=\"https://surfrider-monterey.github.io/coastal-erosion-photos/"
     + alias4(((helper = (helper = helpers.image_id || (depth0 != null ? depth0.image_id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image_id","hash":{},"data":data}) : helper)))
     + "/2015.jpg\" alt=\"\"/>\n  </div>\n</div>\n";
 },"useData":true,"useDepths":true});
