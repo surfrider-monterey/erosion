@@ -15,6 +15,8 @@ app.run = ->
       id = hash[0]
       year = if hash[1]? then hash[1] else false
       app.showImage parseInt(id), parseInt(year)
+    else
+      app.showImage 201500668
     return
   return
 
@@ -25,7 +27,7 @@ app.renderMap = ->
       lng: -121.8583173
     mapTypeId: google.maps.MapTypeId.TERRAIN
     scrollwheel: false
-    zoom: 13
+    zoom: 12
   return
 
 app.getData = (callback) ->
